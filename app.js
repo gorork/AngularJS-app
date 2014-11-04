@@ -1,0 +1,52 @@
+(function(){
+
+  var app = angular.module('cs-angular', []);
+
+  app.controller('StoreController', function(){
+    this.products = gems;
+  });
+
+  var gems = [
+    {
+      name    : 'Deca2014',
+      price   : 99.5,
+      desc    : 'Cool deca....',
+      canBuy  : true,
+      soldOut : true,
+      img     : [
+        {
+          full  : 'img/1.jpg',
+          thumb : 'img/2.jpg'
+        }
+      ]
+    },
+    {
+      name    : 'Gem DF-7',
+      price   : 299.99,
+      desc    : 'Cool gem to take with you....',
+      canBuy  : true,
+      soldOut : true,
+      img     : [
+        {
+          full  : 'img/3.jpg',
+          thumb : 'img/4.jpg'
+        }
+      ]
+    },
+    {
+      name    : 'More Stuff',
+      price   : 3,
+      desc    : 'Some more awesome stuff for....',
+      canBuy  : false,
+      soldOut : false,
+      img     : [
+        {
+          full  : 'img/5.jpg',
+          thumb : 'img/6.jpg'
+        }
+      ]
+    }
+  ]
+
+})();
+
