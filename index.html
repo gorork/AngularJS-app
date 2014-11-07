@@ -28,17 +28,24 @@
             <a href ng-click="panel.selectTab(3)">Reviews</a>
           </li>
         </ul>
+
         <div class="panel" ng-show="panel.isSelected(1)">
           <h4>Description</h4>
           <p>{{product.desc}}</p>
         </div>
+
         <div class="panel" ng-show="panel.isSelected(2)">
           <h4>Specification</h4>
           <p>Not yet</p>
         </div>
+
         <div class="panel" ng-show="panel.isSelected(3)">
-          <h4>Reviews</h4>
-          <p>...</p>
+          <blockquote ng-repeat="review in product.reviews">
+            <h4>Reviews</h4>
+            <b>Stars: {{ review.stars }}</b>
+            <p>{{ review.body }}</p>
+            <cite>by {{ review.author }}</cite>
+          </blockquote>
         </div>
       </section>
     </li>

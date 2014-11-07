@@ -35,6 +35,18 @@
           full  : 'img/1full.jpg',
           thumb : 'img/1.jpg'
         }
+      ],
+      reviews   : [
+        {
+          stars   : 5,
+          body    : 'Wow! Really cool deca.',
+          author  : 'Bill'
+        },
+        {
+          stars   : 2,
+          body    : 'Yak! I didn\'t like its color, like, AT ALL',
+          author  : 'Annie'
+        }
       ]
     },
     {
@@ -48,6 +60,18 @@
           full  : 'img/2full.jpg',
           thumb : 'img/2.jpg'
         }
+      ],
+      reviews   : [
+        {
+          stars   : 1,
+          body    : 'Wow! Where are you looking guys?! It sucks...',
+          author  : 'Jane'
+        },
+        {
+          stars   : 4,
+          body    : 'So far so good.',
+          author  : 'Jon'
+        }
       ]
     },
     {
@@ -60,6 +84,18 @@
         {
           full  : 'img/3full.jpg',
           thumb : 'img/3.jpg'
+        }
+      ],
+      reviews   : [
+        {
+          stars   : 5,
+          body    : 'LOVE-LOVE-LOVE! Oh my God, how long Ive been looking for this one!',
+          author  : 'Mary Johns Jr.'
+        },
+        {
+          stars   : 3,
+          body    : 'The overall quality is fine',
+          author  : 'David Simpson'
         }
       ]
     }
