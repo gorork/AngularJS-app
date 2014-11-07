@@ -15,8 +15,8 @@
       soldOut : true,
       img     : [
         {
-          full  : 'img/1.jpg',
-          thumb : 'img/2.jpg'
+          full  : 'img/1full.jpg',
+          thumb : 'img/1.jpg'
         }
       ]
     },
@@ -28,8 +28,8 @@
       soldOut : true,
       img     : [
         {
-          full  : 'img/3.jpg',
-          thumb : 'img/4.jpg'
+          full  : 'img/2full.jpg',
+          thumb : 'img/2.jpg'
         }
       ]
     },
@@ -41,8 +41,8 @@
       soldOut : false,
       img     : [
         {
-          full  : 'img/5.jpg',
-          thumb : 'img/6.jpg'
+          full  : 'img/3full.jpg',
+          thumb : 'img/3.jpg'
         }
       ]
     }
