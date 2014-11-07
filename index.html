@@ -11,7 +11,9 @@
       <h3>{{ product.name }}
         <em class="pull-right">{{ product.price | currency }}</em>
       </h3>
-      <img ng-src="{{product.img[0].thumb}}" width="100" class="img-circle">
+      <div class='gallery' ng-controller="GalleryController as gallery">
+        <img ng-src="{{ product.img[gallery.current].thumb }}" width="100" class="img-circle">
+      </div>
       <button ng-show="product.canBuy" class="pull-right">Add to cart</button>
 
       <section ng-controller="PanelController as panel">
