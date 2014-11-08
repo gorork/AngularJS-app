@@ -31,17 +31,17 @@
 
         <div class="panel" ng-show="panel.isSelected(1)">
           <h4>Description</h4>
-          <p>{{product.desc}}</p>
+          <blockquote>{{product.desc}}</blockquote>
         </div>
 
         <div class="panel" ng-show="panel.isSelected(2)">
           <h4>Specification</h4>
-          <p>Not yet</p>
+          <blockquote>Not yet</blockquote>
         </div>
 
         <div class="panel" ng-show="panel.isSelected(3)">
+          <h4>Reviews</h4>
           <blockquote ng-repeat="review in product.reviews">
-            <h4>Reviews</h4>
             <b>Stars: {{ review.stars }}</b>
             <p>{{ review.body }}</p>
             <cite>by {{ review.author }}</cite>
@@ -50,7 +50,6 @@
           <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewCntr.addReview(product)">
 
             <blockquote>
-              <h4>Reviews</h4>
               <b>Stars: {{ reviewCntr.review.stars }}</b>
               <p>{{ reviewCntr.review.body }}</p>
               <cite>by {{ reviewCntr.review.author }}</cite>
