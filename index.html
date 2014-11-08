@@ -30,10 +30,7 @@
           </li>
         </ul>
 
-        <div class="panel" ng-show="panel.isSelected(1)">
-          <h4>Description</h4>
-          <blockquote>{{product.desc}}</blockquote>
-        </div>
+        <div class="panel" ng-include="'product-description.html'" ng-show="panel.isSelected(1)"></div>
 
         <div class="panel" ng-show="panel.isSelected(2)">
           <h4>Specification</h4>
