@@ -6,10 +6,17 @@
     this.products = gems;
   });
 
-  app.controller('GalleryController', function(){
-    this.current = 0;
-    this.setCurrent = function(val){
-      (val === null) ? this.current = 0 : this.current = val;
+  app.directive('productGallery', function(){
+    return {
+      restrict    : 'E',
+      templateUrl : "product-gallery.html",
+      controller  : function(){
+        this.current = 0;
+        this.setCurrent = function(val){
+          (val === null) ? this.current = 0 : this.current = val;
+        }
+      },
+      controllerAs  : 'gallery'
     }
   });
 

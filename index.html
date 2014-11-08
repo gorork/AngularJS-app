@@ -12,12 +12,13 @@
       <h3>{{ product.name }}
         <em class="pull-right">{{ product.price | currency }}</em>
       </h3>
-      <div class='gallery' ng-controller="GalleryController as gallery">
-        <img ng-src="{{ product.img[gallery.current].thumb }}" width="100" class="img-circle">
-      </div>
+
       <button ng-show="product.canBuy" class="pull-right">Add to cart</button>
 
+      <product-gallery></product-gallery>
+
       <product-panels></product-panels>
+
     </li>
   </ul>
 
