@@ -30,12 +30,9 @@
           </li>
         </ul>
 
-        <div class="panel" ng-include="'product-description.html'" ng-show="panel.isSelected(1)"></div>
+        <product-description class="panel" ng-show="panel.isSelected(1)"></product-description>
 
-        <div class="panel" ng-show="panel.isSelected(2)">
-          <h4>Specification</h4>
-          <blockquote>Not yet</blockquote>
-        </div>
+        <div product-specs class="panel" ng-show="panel.isSelected(2)"></div>
 
         <div class="panel" ng-show="panel.isSelected(3)">
           <h4>Reviews</h4>

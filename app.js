@@ -32,6 +32,20 @@
     }
   });
 
+  app.directive('productDescription', function(){
+    return {
+      restrict    : 'E',
+      templateUrl : 'product-description.html'
+    }
+  });
+
+  app.directive('productSpecs', function(){
+    return {
+      restrict    : 'A',
+      templateUrl : 'product-specs.html'
+    }
+  });
+
   var gems = [
     {
       name    : 'Deca2014',
