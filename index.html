@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>AngularJS</title>
   <link rel="stylesheet" href="bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body ng-controller="StoreController as store">
   <ul class="list-group">
@@ -47,16 +48,17 @@
             <cite>by {{ review.author }}</cite>
           </blockquote>
 
-          <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewCntr.addReview(product)">
+          <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewForm.$valid && reviewCntr.addReview(product)" novalidate>
 
             <blockquote>
+              <p><em>Preview your review</em></p>
               <b>Stars: {{ reviewCntr.review.stars }}</b>
               <p>{{ reviewCntr.review.body }}</p>
               <cite>by {{ reviewCntr.review.author }}</cite>
             </blockquote>
 
             <div class="form-group">
-              <select class="form-control" ng-model="reviewCntr.review.stars">
+              <select class="form-control" ng-model="reviewCntr.review.stars" required>
                 <option value="1">1 star</option>
                 <option value="2">2 stars</option>
                 <option value="3">3 stars</option>
@@ -65,11 +67,11 @@
               </select>
             </div>
             <div class="form-group">
-              <textarea class="form-control" rows="3"  ng-model="reviewCntr.review.body"></textarea>
+              <textarea class="form-control" rows="3"  ng-model="reviewCntr.review.body" required></textarea>
             </div>
             <div class="form-group form-inline">
               <label for="author">by: </label>
-              <input class="form-control" id="author" type="email"  ng-model="reviewCntr.review.author"/>
+              <input class="form-control" id="author" type="email"  ng-model="reviewCntr.review.author" required/>
               <input type="submit" class="btn btn-default" value="Submit">
             </div>
 
