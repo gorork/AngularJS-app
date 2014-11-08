@@ -23,6 +23,10 @@
     }
   });
 
+  app.controller('ReviewController', function(){
+    this.review = {};
+  });
+
   var gems = [
     {
       name    : 'Deca2014',
