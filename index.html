@@ -47,7 +47,7 @@
             <cite>by {{ review.author }}</cite>
           </blockquote>
 
-          <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr">
+          <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewCntr.addReview(product)">
 
             <blockquote>
               <h4>Reviews</h4>
@@ -71,7 +71,7 @@
             <div class="form-group form-inline">
               <label for="author">by: </label>
               <input class="form-control" id="author" type="email"  ng-model="reviewCntr.review.author"/>
-              <button type="submit" class="btn btn-default">Submit</button>
+              <input type="submit" class="btn btn-default" value="Submit">
             </div>
 
           </form>
