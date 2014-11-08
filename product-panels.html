@@ -23,7 +23,7 @@
       <cite>by {{ review.author }} on {{ review.createdOn | date }}</cite>
     </blockquote>
 
-    <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewForm.$valid && reviewCntr.addReview(product)" novalidate>
+    <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewForm.$valid && reviewCntr.addReview(product, reviewForm)" novalidate>
 
       <blockquote>
         <p><em>Preview your review</em></p>
