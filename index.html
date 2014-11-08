@@ -45,7 +45,7 @@
           <blockquote ng-repeat="review in product.reviews">
             <b>Stars: {{ review.stars }}</b>
             <p>{{ review.body }}</p>
-            <cite>by {{ review.author }}</cite>
+            <cite>by {{ review.author }} on {{ review.createdOn | date }}</cite>
           </blockquote>
 
           <form name="reviewForm" role="form" ng-controller="ReviewController as reviewCntr" ng-submit="reviewForm.$valid && reviewCntr.addReview(product)" novalidate>

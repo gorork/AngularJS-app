@@ -26,6 +26,7 @@
   app.controller('ReviewController', function(){
     this.review = {};
     this.addReview = function(product){
+      this.review.createdOn = Date.now();
       product.reviews.push(this.review);
       this.review = {};
     }
@@ -48,12 +49,14 @@
         {
           stars   : 5,
           body    : 'Wow! Really cool deca.',
-          author  : 'Bill'
+          author  : 'Bill',
+          createdOn : 1397490980837
         },
         {
           stars   : 2,
           body    : 'Yak! I didn\'t like its color, like, AT ALL',
-          author  : 'Annie'
+          author  : 'Annie',
+          createdOn : 1397490923826
         }
       ]
     },
@@ -73,12 +76,14 @@
         {
           stars   : 1,
           body    : 'Wow! Where are you looking guys?! It sucks...',
-          author  : 'Jane'
+          author  : 'Jane',
+          createdOn : 1397490111111
         },
         {
           stars   : 4,
           body    : 'So far so good.',
-          author  : 'Jon'
+          author  : 'Jon',
+          createdOn : 1397490982222
         }
       ]
     },
@@ -98,12 +103,14 @@
         {
           stars   : 5,
           body    : 'LOVE-LOVE-LOVE! Oh my God, how long Ive been looking for this one!',
-          author  : 'Mary Johns Jr.'
+          author  : 'Mary Johns Jr.',
+          createdOn : 1397490980837
         },
         {
           stars   : 3,
           body    : 'The overall quality is fine',
-          author  : 'David Simpson'
+          author  : 'David Simpson',
+          createdOn : 1397490980837
         }
       ]
     }
